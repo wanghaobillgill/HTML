@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="lib/jq.js"></script>
+    <script type="text/javascript">
+        //jquery是dom对象的数组加jquery提供的一系列函数
+        //jquery对象不能使用DOM对象的属性和方法
+        //DOM对象也不能使用Jquery对象的属性和方法
+
+        $(function () {
+            //DOM转换为Jquery对象
+            let $btn = $(document.getElementById("btn"));
+            $btn.click(function () {
+                alert("Foo Fong Fong");
+            });
+            //Jquery对象转化为DOM对象
+            $("#btn1")[0].onclick=function () {
+                alert("Hao Wang");
+            }
+        });
+
+    </script>
+</head>
+<body>
+<button id="btn">I love who?</button>
+<button id="btn1">Foo Fong Fong loves who?</button>
+</body>
+</html>

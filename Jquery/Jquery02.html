@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="lib/jq.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //jQ基本选择器
+            // $("#myDiv").text("NiHao");
+            let $div = $("div");
+            for (var i = 0; i < $div.length; i++) {
+                alert($div.html());
+            }
+            $(".myClass").click(function () {
+                alert("HHHHH");
+
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="myDiv"><span></span>MyDIV</div>
+<div id="myDiv2">MyDIV2</div>
+<span id="mySpan">MySpan</span>
+<div class="myClass">231</div>
+<div class="myClass">321</div>
+<div class="myClass">213</div>
+</body>
+</html>
